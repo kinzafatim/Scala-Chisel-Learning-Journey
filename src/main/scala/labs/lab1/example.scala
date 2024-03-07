@@ -6,6 +6,7 @@ class andgate extends Module{
         val b= Input(UInt(1.W))
         val c= Output(UInt(1.W))
     })
+    
     io.c:=io.a&io.b
 
 }
