@@ -39,7 +39,6 @@ val mux1=MuxLookup(io.s1, false.B,Array(
     ) )
 
 ))
-
 io.out:=MuxLookup(io.s2,false.B,Array( 
     (0.U) -> mux0,
     (1.U) -> mux1

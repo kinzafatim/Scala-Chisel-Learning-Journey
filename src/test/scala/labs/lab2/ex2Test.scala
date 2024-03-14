@@ -2,12 +2,12 @@ package labs
 import chisel3._
 import chiseltest._
 import org.scalatest._
-class exercise2test extends FreeSpec with ChiselScalatestTester{
+class ex2Test extends FreeSpec with ChiselScalatestTester{
     "muxlookup" in {
-        test(new exercise2){
-        x=>
-        x.io.in0.poke(0.B)
-        x.io.in1.poke(0.B)
+        test(new Ex2){
+            x=>
+            x.io.in0.poke(0.B)
+            x.io.in1.poke(0.B)
         x.io.in2.poke(0.B)
         x.io.in3.poke(0.B)
         x.io.in4.poke(0.B)
