@@ -9,7 +9,6 @@ class Task2 extends Module{
         val out = Vec(4,Output(Bool()))
 })
 val select= Cat(io.sel(1), io.sel(0))
-
 io.out(0) :=MuxLookup(select, false.B,Array(
     (0.U) -> io.in(0),
     (1.U) -> io.in(1),
