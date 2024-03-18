@@ -1,4 +1,4 @@
-package labs
+package labs.lab2
 import chisel3._ 
 
 class mmux extends Bundle{

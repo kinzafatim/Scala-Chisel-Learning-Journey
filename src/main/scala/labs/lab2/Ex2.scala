@@ -1,7 +1,7 @@
-package labs
+package labs.lab2
 import chisel3._
 import chisel3.util._
-class exercise2 extends Module {
+class Ex2 extends Module {
 val io = IO(new Bundle {
 val in0 = Input(Bool())
 val in1 = Input(Bool())
