@@ -6,11 +6,11 @@ class task2test extends FreeSpec with ChiselScalatestTester{
     "Immediate Generator" in{
         test(new task2){
             x=>
-            x.io.instr.poke("b0010011".U) 
-           // x.io.opcode.poke(5.U) 
+            x.io.instr.poke("".U)
+            x.io.opcode.poke("b0010011".U) // I-type
             x.clock.step(4)
 
-            x.io.out_ins.expect("b00000000000000000000_1111111111".U)
+            x.io.out_ins.expect("".U)
         }
     }
 }

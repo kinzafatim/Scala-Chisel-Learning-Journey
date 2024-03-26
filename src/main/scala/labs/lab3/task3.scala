@@ -7,13 +7,13 @@ class LM_IO_Interface_decoder_with_valid extends Bundle {
 }
 class task3 extends Module {
     val io = IO(new LM_IO_Interface_decoder_with_valid)
-    when (io.in === "b00".U) {
+    when (io.in === "b00".U) { //input=0
         io.out := "b0001".U
-    } .elsewhen(io.in === "b01".U) {
+    } .elsewhen(io.in === "b01".U) { //input=1
         io.out := "b0010".U
-    } .elsewhen(io.in === "b10".U) {
+    } .elsewhen(io.in === "b10".U) { // input=2
         io.out := "b0100".U
     } .otherwise {
-        io.out := "b1000".U
+        io.out := "b1000".U //input=3
         }
 }
