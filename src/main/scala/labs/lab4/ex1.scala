@@ -15,12 +15,12 @@ object ALUOPCODE {
   val ALU_SRA   = 9.U(4.W)
   val ALU_COPY_A = 10.U(4.W)
   val ALU_COPY_B = 11.U(4.W)
-  val ALU_MUL = 12.U(4.W)
-  val ALU_DIV = 13.U(4.W)
-  val ALU_MOD = 14.U(4.W)
-  val ALU_MAX = 15.U(4.W) 
-  val ALU_MIN = 16.U(4.W)
-  val ALU_XXX = 17.U(4.W)
+//   val ALU_MUL = 12.U(4.W)
+//   val ALU_DIV = 13.U(4.W)
+//   val ALU_MOD = 14.U(4.W)
+//   val ALU_MAX = 15.U(4.W) 
+//   val ALU_MIN = 16.U(4.W)
+  val ALU_XXX = 12.U(4.W)
 }
 trait Configg {
 
@@ -88,22 +88,22 @@ class ex1 extends Module with Configg{
         is(ALU_COPY_B){
             io.out:=io.in_B
         }
-        is(ALU_MUL){
-            io.out:= (io.in_A * io.in_B)
-        }
-        is(ALU_DIV){
-            io.out:= (io.in_A / io.in_B)
-        }
-        is(ALU_MOD){
-            io.out:= (io.in_A % io.in_B)
-        }
-        is(ALU_MAX){
-            io.out:= Mux(io.in_A > io.in_B, io.in_A, io.in_B)
+        // is(ALU_MUL){
+        //     io.out:= (io.in_A * io.in_B)
+        // }
+        // is(ALU_DIV){
+        //     io.out:= (io.in_A / io.in_B)
+        // }
+        // is(ALU_MOD){
+        //     io.out:= (io.in_A % io.in_B)
+        // }
+        // is(ALU_MAX){
+        //     io.out:= Mux(io.in_A > io.in_B, io.in_A, io.in_B)
 
-        }
-        is(ALU_MIN){
-            io.out:= Mux(io.in_A < io.in_B, io.in_A, io.in_B)
-        }
+        // }
+        // is(ALU_MIN){
+        //     io.out:= Mux(io.in_A < io.in_B, io.in_A, io.in_B)
+        // }
         is(ALU_XXX){
             io.out:=0.U
         }
