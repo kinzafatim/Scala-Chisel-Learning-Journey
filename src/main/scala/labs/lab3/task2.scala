@@ -8,8 +8,8 @@ class IO_ImmdValGen extends Bundle {
 }
 class task2 extends Module {
     val io = IO ( new IO_ImmdValGen)
-    val wiree = Wire(UInt(32.W))
-
+    val wiree = WireInit(0.U(32.W))
+    io.out_ins:=0.U
     switch(io.opcode){
         is("b0010011".U){ // I 0010011
             wiree:= Cat(Fill(20, io.instr(31)), io.instr(31, 20))

@@ -15,7 +15,7 @@ object ALUOPCODE {
   val ALU_SRA   = 9.U(4.W)
   val ALU_COPY_A = 10.U(4.W)
   val ALU_COPY_B = 11.U(4.W)
-//   val ALU_MUL = 12.U(4.W)
+  val ALU_MUL = 12.U(4.W)
 //   val ALU_DIV = 13.U(4.W)
 //   val ALU_MOD = 14.U(4.W)
 //   val ALU_MAX = 15.U(4.W) 
@@ -51,6 +51,7 @@ class ex1 extends Module with Configg{
 
     val shiftl = Reverse(shiftr)
     io.out := 0.U
+    io.sum :=0.U
     switch(io.alu_Op){
         is(ALU_ADD){
             io.out:= sum
