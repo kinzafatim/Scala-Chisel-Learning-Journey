@@ -9,7 +9,7 @@ class IO_Interface(width: Int) extends Bundle {
   val alu_out = Output(UInt(width.W))
 }
 
-class ALU(width_parameter: Int) extends Module {
+class ex1(width_parameter: Int) extends Module {
   val io = IO(new IO_Interface(width_parameter))
   io.alu_out := 0.U
   
