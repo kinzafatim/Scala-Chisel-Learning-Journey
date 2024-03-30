@@ -4,7 +4,7 @@ import chiseltest._
 import chiseltest.experimental.TestOptionBuilder._
 import org.scalatest._
 class ex3test extends FreeSpec with ChiselScalatestTester {
-  "Task1 Adder" in {
+  "ex3" in {
     test(new Operator(2,UInt(16.W))( _ & _ )){
         x=>
         x.io.in(0).poke(1.U)
