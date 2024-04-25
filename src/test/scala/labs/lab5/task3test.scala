@@ -9,10 +9,10 @@ class task3test extends FreeSpec with ChiselScalatestTester {
         x=>
         x.io.sel.poke(1.B)
         x.io.inA.poke(0.U)
-        x.io.inB.poke(1.U)
+        x.io.inB.poke(6.U)
         x.clock.step(10)
 
-        x.io.out.expect(1.U)
+        x.io.out.expect(6.U)
     }
   }
 }
