@@ -6,7 +6,7 @@ class ex2test extends FreeSpec with ChiselScalatestTester{
     "ex2 " in {
         test(new ex2(5)){
         x=>
-        x.clock.step(4)
+        x.clock.step(100)
         x.io.out.expect("b0100".U)
         }
     }
