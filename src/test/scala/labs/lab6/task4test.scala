@@ -5,11 +5,11 @@ import org.scalatest.FreeSpec
 import chisel3.experimental.BundleLiterals._
 class task4test extends FreeSpec with ChiselScalatestTester {
   "lab6 task4 " in {
-    test(new task4(10)){
+    test(new task4(4)){
         x=>
-        x.io.up_down.poke(1.B)
-        x.clock.step(100)
-        x.io.out.expect(4.U)
+        x.io.up_down.poke(0.B)
+        x.clock.step(10)
+        x.io.out.expect(2.U)
         }
   }
 }

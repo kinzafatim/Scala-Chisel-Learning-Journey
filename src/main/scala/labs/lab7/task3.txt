@@ -1,0 +1,12 @@
+What’s the difference between Arbiter and RRArbiter? Your answer should include a
+portion relating to the members of each class and drive your answer from hardware prespective.
+Suggestion: Go to the chisel-lang.org and look for API in the library under util. Also, see Verilog
+of both Arbiter and RRArbiter. For further details see: https://www.chisel-lang.org/api/
+latest/
+
+Arbiter: Fixed-priority scheme, where the highest-priority requester is always granted access 
+if it makes a request. This can lead to starvation for lower-priority requesters.
+
+RRArbiter: Round-robin scheme, which ensures that all requesters get access in a cyclic order, 
+preventing starvation and ensuring fairness.
+
